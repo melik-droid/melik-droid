@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="640" height="320" viewBox="0 0 640 320" role="img" aria-labelledby="title desc">
-<title id="title">Now — building: MacCleaner, learning: Bayesian inference, status: open to work</title>
+<title id="title">Now — building: web3 · vision · apps, learning: Bayesian inference, status: open to work</title>
 <desc id="desc">A purple pixel desk. The monitor types out what I am building and learning while code scrolls past beside it.</desc>
 <style>
 text {font-family:'Courier New',ui-monospace,monospace;font-size:17px}
@@ -14,7 +14,7 @@ text {font-family:'Courier New',ui-monospace,monospace;font-size:17px}
  .led {animation:blink 2.4s step-end infinite}
 }
 @keyframes line0 {0%,3% {transform:translateX(0)} 12%,93% {transform:translateX(171.2px)} 94%,100% {transform:translateX(0)}}
-@keyframes line1 {0%,18% {transform:translateX(0)} 30%,93% {transform:translateX(212.0px)} 94%,100% {transform:translateX(0)}}
+@keyframes line1 {0%,18% {transform:translateX(0)} 30%,93% {transform:translateX(314.0px)} 94%,100% {transform:translateX(0)}}
 @keyframes line2 {0%,34% {transform:translateX(0)} 50%,93% {transform:translateX(293.6px)} 94%,100% {transform:translateX(0)}}
 @keyframes line3 {0%,54% {transform:translateX(0)} 64%,93% {transform:translateX(232.4px)} 94%,100% {transform:translateX(0)}}
 @keyframes caret {0%,67% {opacity:0} 68%,93% {opacity:1} 94%,100% {opacity:0}}
@@ -42,11 +42,11 @@ text {font-family:'Courier New',ui-monospace,monospace;font-size:17px}
 <rect class="led" x="376" y="229" width="8" height="3" fill="#C5BCFF"/>
 <g clip-path="url(#screen)">
 <text x="64" y="86" textLength="163.2" lengthAdjust="spacingAndGlyphs" xml:space="preserve"><tspan fill="#9391FF">melik@dev</tspan><tspan fill="#77748F">:~$ </tspan><tspan fill="#EDEDEF">now</tspan></text>
-<text x="64" y="114" textLength="204.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve"><tspan fill="#77748F">building  </tspan><tspan fill="#EDEDEF">MacCleaner</tspan></text>
+<text x="64" y="114" textLength="306.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve"><tspan fill="#77748F">building  </tspan><tspan fill="#EDEDEF">web3 · vision · apps</tspan></text>
 <text x="64" y="142" textLength="285.6" lengthAdjust="spacingAndGlyphs" xml:space="preserve"><tspan fill="#77748F">learning  </tspan><tspan fill="#EDEDEF">Bayesian inference</tspan></text>
 <text x="64" y="170" textLength="224.4" lengthAdjust="spacingAndGlyphs" xml:space="preserve"><tspan fill="#77748F">status    </tspan><tspan fill="#B1AEFF">open to work</tspan></text>
 <rect class="cover" style="animation:line0 16s steps(16,end) infinite" x="60" y="67" width="171.2" height="26" fill="#0D0D0F"/>
-<rect class="cover" style="animation:line1 16s steps(20,end) infinite" x="60" y="95" width="212.0" height="26" fill="#0D0D0F"/>
+<rect class="cover" style="animation:line1 16s steps(30,end) infinite" x="60" y="95" width="314.0" height="26" fill="#0D0D0F"/>
 <rect class="cover" style="animation:line2 16s steps(28,end) infinite" x="60" y="123" width="293.6" height="26" fill="#0D0D0F"/>
 <rect class="cover" style="animation:line3 16s steps(22,end) infinite" x="60" y="151" width="232.4" height="26" fill="#0D0D0F"/>
 <g class="caret-group"><text x="64" y="198" textLength="132.6" lengthAdjust="spacingAndGlyphs" xml:space="preserve"><tspan fill="#9391FF">melik@dev</tspan><tspan fill="#77748F">:~$ </tspan></text><rect class="caret" x="198.6" y="183" width="9" height="18" fill="#9391FF"/></g>

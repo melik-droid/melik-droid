@@ -10,7 +10,7 @@ I build apps, smart contracts and things that see. Usually moving between TypeSc
 
 ## <img src="assets/pixel/now.svg" width="24" height="24" alt=""> Now
 
-<img src="assets/desk.svg" width="400" alt="Now — building: MacCleaner · learning: Bayesian inference · status: open to work"> <a href="https://www.last.fm/user/melik_cymz"><img src="assets/music.svg" width="400" alt="On repeat: my most played artists on Last.fm this week and the last track I played. Updated daily."></a>
+<img src="assets/desk.svg" width="640" alt="Now — building: web3 · vision · apps · learning: Bayesian inference · status: open to work">
 
 <table>
 <tr>

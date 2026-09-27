@@ -16,7 +16,7 @@ from pixel import ACCENT, BG, ICONS, INK, MUG, PLANT, icon, sprite
 ROOT = Path(__file__).resolve().parent.parent
 
 # Edit these to change what the little terminal says.
-NOW = [("building", "MacCleaner"), ("learning", "Bayesian inference"), ("status", "open to work")]
+NOW = [("building", "web3 · vision · apps"), ("learning", "Bayesian inference"), ("status", "open to work")]
 
 CHAR = 10.2  # monospace advance at 17px; text is forced to this width with textLength
 
@@ -53,8 +53,8 @@ def terminal_lines():
     prompt = (f'<tspan fill="{ACCENT}">melik@dev</tspan><tspan fill="#77748F">:~$ </tspan>', 13)
     lines = [(prompt[0] + f'<tspan fill="{INK}">now</tspan>', 16)]
     for label, value in NOW:
-        if len(value) > 18:
-            raise ValueError(f"'{value}' is too long for the terminal (18 characters max)")
+        if len(value) > 21:
+            raise ValueError(f"'{value}' is too long for the terminal (21 characters max)")
         colour = "#B1AEFF" if label == "status" else INK
         lines.append((f'<tspan fill="#77748F">{label:<10}</tspan><tspan fill="{colour}">{escape(value)}</tspan>',
                       10 + len(value)))

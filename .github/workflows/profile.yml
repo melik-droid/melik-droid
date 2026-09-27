@@ -36,16 +36,10 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: python scripts/update_stats.py
-      - name: Music card
-        # Last.fm outages shouldn't block the GitHub cards.
-        continue-on-error: true
-        env:
-          LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
-        run: python scripts/update_music.py
       - name: Commit updated cards
         if: ${{ !cancelled() }}
         run: |
-          git add assets/languages.svg assets/stats.svg assets/music.svg
+          git add assets/languages.svg assets/stats.svg
           if git diff --cached --quiet; then exit 0; fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
