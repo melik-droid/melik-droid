@@ -8,56 +8,23 @@ I build apps, smart contracts and things that see. Usually moving between TypeSc
 
 <a href="https://www.melik.dev/"><img src="assets/website.svg" width="108" height="32" alt="Website"></a> <a href="https://www.linkedin.com/in/melik-ahmet-caymazo%C4%9Flu-42a136254/"><img src="assets/linkedin.svg" width="109" height="32" alt="LinkedIn"></a> <a href="mailto:melikcaymaz@gmail.com"><img src="assets/email.svg" width="92" height="32" alt="Email"></a>
 
-## <img src="assets/pixel/now.svg" width="24" height="24" alt=""> Now
+## <img src="assets/pixel/briefcase.svg" width="24" height="24" alt=""> Experience
 
-<img src="assets/desk.svg" width="640" alt="Now — building: web3 · vision · apps · learning: Bayesian inference · status: open to work">
+<img src="assets/desk.svg" align="right" width="400" alt="Now — building: web3 · vision · apps · learning: Bayesian inference · stack: TS, Solidity, Python · based in Gebze, Türkiye · open to work">
 
-<table>
-<tr>
-<td valign="top" width="50%">
+<img src="assets/pixel/dot-now.svg" width="12" height="12" alt="Current"> **Software Team Vice President** · <sub>2024 – now</sub><br>
+<sub>GTU Blockchain Society · dev team, workshops, mentoring</sub>
 
-### <img src="assets/pixel/hammer.svg" width="20" height="20" alt=""> Things I've built
+<img src="assets/pixel/dot.svg" width="12" height="12" alt=""> **Computer Engineering Intern** · <sub>Jul – Aug 2026</sub><br>
+<sub>XON Technology · PHP nodes for PUQ AI, Bayesian engine</sub>
 
-<img src="assets/pixel/hourglass.svg" width="16" height="16" alt=""> **[ChronoTrade](https://github.com/GTU-Blockchain/chronotrade-ethglobal-prague)** — trade skills for time<br>
-<sub><img src="assets/pixel/trophy.svg" width="12" height="12" alt=""> Blockscout prize · ETHGlobal Prague 2025</sub>
+<img src="assets/pixel/dot.svg" width="12" height="12" alt=""> **Part-time Full-stack Developer** · <sub>2025 – 2026</sub><br>
+<sub>Racfathers · Web3 apps with React, Express and Prisma</sub>
 
-<img src="assets/pixel/cat.svg" width="16" height="16" alt=""> **[BitBrawlers](https://github.com/GTU-Blockchain/bitbrawlers-ethrome-2025)** — NFT cats that battle on-chain<br>
-<sub><img src="assets/pixel/trophy.svg" width="12" height="12" alt=""> ENS track prize · ETHRome 2025</sub>
+<img src="assets/pixel/dot.svg" width="12" height="12" alt=""> **B.Sc. Computer Engineering** · <sub>2022 – now</sub><br>
+<sub>Gebze Technical University</sub>
 
-<img src="assets/pixel/ballot.svg" width="16" height="16" alt=""> **[Obscura](https://github.com/GTU-Blockchain/obscura-monad-blitz-istanbul)** — anonymous votes and sealed bids<br>
-<sub>Monad Blitz Istanbul 2025</sub>
-
-<img src="assets/pixel/eye.svg" width="16" height="16" alt=""> **[PPE detection](https://github.com/melik-droid/ceng-mod01-ppe-detection)** — YOLOv8 on a Raspberry Pi safety robot<br>
-<sub>Computer vision · Python</sub>
-
-<img src="assets/pixel/car.svg" width="16" height="16" alt=""> **[PayTak](https://github.com/PayTak-Org/PayTak-App)** — ride sharing with staked payments<br>
-<sub>React Native · Express · Solidity</sub>
-
-</td>
-<td valign="top" width="50%">
-
-### <img src="assets/pixel/briefcase.svg" width="20" height="20" alt=""> Experience
-
-<img src="assets/pixel/dot-now.svg" width="12" height="12" alt="Current"> **Software Team Vice President**<br>
-GTU Blockchain Society · <sub>2024 – now</sub><br>
-<sub>Leading the software team, running workshops and mentoring members.</sub>
-
-<img src="assets/pixel/dot.svg" width="12" height="12" alt=""> **Computer Engineering Intern**<br>
-XON Technology · <sub>Jul – Aug 2026</sub><br>
-<sub>PHP integration nodes for the PUQ AI platform and a Bayesian symptom-checking engine.</sub>
-
-<img src="assets/pixel/dot.svg" width="12" height="12" alt=""> **Part-time Full-stack Developer**<br>
-Racfathers · <sub>Jun 2025 – Feb 2026</sub><br>
-<sub>Web3 applications with React, Express, Prisma and PostgreSQL.</sub>
-
-<img src="assets/pixel/dot.svg" width="12" height="12" alt=""> **B.Sc. Computer Engineering**<br>
-Gebze Technical University · <sub>2022 – now</sub>
-
-</td>
-</tr>
-</table>
-
-More projects and the longer story at **[melik.dev](https://www.melik.dev/)**.
+Projects and the longer story at **[melik.dev](https://www.melik.dev/)**.
 
 ## <img src="assets/pixel/chart.svg" width="24" height="24" alt=""> In the code
 
