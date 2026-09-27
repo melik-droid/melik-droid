@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="428" viewBox="0 0 480 428" role="img" aria-labelledby="title desc">
+<title id="title">Languages across my public repos</title>
+<desc id="desc">Code bytes reported by GitHub. Excludes forks, private repositories and the profile repository. Not a proficiency score.</desc>
+<rect width="480" height="428" rx="12" fill="#0D0D0F"/>
+<g font-family="Arial,Helvetica,sans-serif">
+<text x="24" y="38" fill="#EDEDEF" font-size="22" font-weight="700">Languages in my repos</text>
+<text x="24" y="63" fill="#A1A1AA" font-size="14">14 public source repos · code bytes</text>
+<rect x="24.000" y="84" width="111.852" height="12" fill="#9391FF"/>
+<circle cx="30" cy="124" r="5" fill="#9391FF"/>
+<text x="46" y="130" fill="#EDEDEF" font-size="19">C</text>
+<text x="456" y="130" text-anchor="end" fill="#A1A1AA" font-size="19">25.9%</text>
+<rect x="135.852" y="84" width="105.847" height="12" fill="#B1AEFF"/>
+<circle cx="30" cy="162" r="5" fill="#B1AEFF"/>
+<text x="46" y="168" fill="#EDEDEF" font-size="19">TypeScript</text>
+<text x="456" y="168" text-anchor="end" fill="#A1A1AA" font-size="19">24.5%</text>
+<rect x="241.699" y="84" width="72.715" height="12" fill="#7088CF"/>
+<circle cx="30" cy="200" r="5" fill="#7088CF"/>
+<text x="46" y="206" fill="#EDEDEF" font-size="19">Python</text>
+<text x="456" y="206" text-anchor="end" fill="#A1A1AA" font-size="19">16.8%</text>
+<rect x="314.414" y="84" width="50.803" height="12" fill="#6CA5B8"/>
+<circle cx="30" cy="238" r="5" fill="#6CA5B8"/>
+<text x="46" y="244" fill="#EDEDEF" font-size="19">Shell</text>
+<text x="456" y="244" text-anchor="end" fill="#A1A1AA" font-size="19">11.8%</text>
+<rect x="365.218" y="84" width="27.932" height="12" fill="#9DBAA5"/>
+<circle cx="30" cy="276" r="5" fill="#9DBAA5"/>
+<text x="46" y="282" fill="#EDEDEF" font-size="19">JavaScript</text>
+<text x="456" y="282" text-anchor="end" fill="#A1A1AA" font-size="19">6.5%</text>
+<rect x="393.150" y="84" width="22.111" height="12" fill="#B2A0C4"/>
+<circle cx="30" cy="314" r="5" fill="#B2A0C4"/>
+<text x="46" y="320" fill="#EDEDEF" font-size="19">C++</text>
+<text x="456" y="320" text-anchor="end" fill="#A1A1AA" font-size="19">5.1%</text>
+<rect x="415.261" y="84" width="40.739" height="12" fill="#777780"/>
+<circle cx="30" cy="352" r="5" fill="#777780"/>
+<text x="46" y="358" fill="#EDEDEF" font-size="19">Other</text>
+<text x="456" y="358" text-anchor="end" fill="#A1A1AA" font-size="19">9.4%</text>
+<text x="24" y="407" fill="#A1A1AA" font-size="13">Updated 2026-09-27 · refreshed daily</text></g></svg>
