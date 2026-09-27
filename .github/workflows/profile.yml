@@ -1,0 +1,73 @@
+name: Refresh profile cards
+
+on:
+  schedule:
+    - cron: '23 6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/update_*.py
+      - .github/workflows/profile.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-cards
+  cancel-in-progress: false
+
+jobs:
+  cards:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run tests
+        run: python -m unittest discover -s tests
+      - name: Language card
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/update_languages.py
+      - name: Activity card
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/update_stats.py
+      - name: Music card
+        # Last.fm outages shouldn't block the GitHub cards.
+        continue-on-error: true
+        env:
+          LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
+        run: python scripts/update_music.py
+      - name: Commit updated cards
+        if: ${{ !cancelled() }}
+        run: |
+          git add assets/languages.svg assets/stats.svg assets/music.svg
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Refresh profile cards'
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+  snake:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake-dark.svg?palette=github-dark&color_snake=#9391FF&color_dots=#161B22,#2E2A48,#4B4786,#7370D0,#B1AEFF
+            dist/snake-light.svg?palette=github-light&color_snake=#6F6CF0&color_dots=#EBEDF0,#DCDAFF,#B1AEFF,#8C89F5,#6F6CF0
+      # Snake frames change daily; keeping them on a history-less branch keeps main small.
+      - uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+          keep_history: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

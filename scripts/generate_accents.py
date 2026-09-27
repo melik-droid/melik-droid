@@ -2,6 +2,10 @@
 
 from html import escape
 from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from pixel import INK, MUTED
 
 ROOT = Path(__file__).resolve().parent.parent
 PURPLE = "#9391FF"
@@ -37,46 +41,46 @@ text { font-family: 'Courier New',monospace; font-size: 25px; fill: #9391FF; }
     return "\n".join(parts) + "</svg>\n"
 
 
-def computer():
-    rain = []
-    for i in range(8):
-        x = 15 + i * 27
-        rain.append(f'<g class="rain" style="animation-delay:-{i * .7}s" opacity=".25">'
-                    f'<text x="{x}" y="12">01</text><text x="{x}" y="30">10</text>'
-                    f'<text x="{x}" y="48">01</text></g>')
-    keys = ''.join(f'<rect x="{44 + col * 13 - row * 3}" y="{134 + row * 7}" width="9" height="3" fill="#77748F"/>'
-                   for row in range(3) for col in range(11))
-    return '''<svg xmlns="http://www.w3.org/2000/svg" width="240" height="190" viewBox="0 0 240 190" role="img" aria-labelledby="title desc">
-<title id="title">A little computer, always building</title>
-<desc id="desc">An original purple pixel laptop with falling binary digits and a blinking terminal cursor.</desc>
+TICKER = [("OPEN TO WORK", "#B1AEFF"), ("GEBZE, TÜRKİYE", MUTED),
+          ("BLOCKSCOUT PRIZE @ ETHGLOBAL PRAGUE", INK), ("ENS PRIZE @ ETHROME", INK),
+          ("GTU BLOCKCHAIN · SOFTWARE VP", INK), ("SOLIDITY", MUTED), ("TYPESCRIPT", MUTED),
+          ("PYTHON", MUTED), ("REACT NATIVE", MUTED), ("YOLOv8", MUTED), ("SPRING BOOT", MUTED)]
+TICKER_CHAR = 7.8  # 13px monospace advance, enforced with textLength
+
+
+def ticker(width):
+    parts, x = [], 0.0
+    for label, colour in TICKER:
+        length = len(label) * TICKER_CHAR
+        parts.append(f'<text x="{x:.1f}" y="25" fill="{colour}" textLength="{length:.1f}" '
+                     f'lengthAdjust="spacingAndGlyphs">{escape(label)}</text>')
+        x += length + 18
+        parts.append(f'<rect x="{x + 2:.1f}" y="15" width="2" height="6" fill="{PURPLE}"/>'
+                     f'<rect x="{x:.1f}" y="17" width="6" height="2" fill="{PURPLE}"/>')
+        x += 24
+    strip = "".join(parts)
+    seconds = x / 45
+    label = " · ".join(item for item, _ in TICKER)
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="40" viewBox="0 0 {width} 40" role="img" aria-label="{escape(label)}">
 <style>
-text {font-family:'Courier New',monospace;font-size:10px;fill:#9391FF}
-@media (prefers-reduced-motion: no-preference) {
- .rain {animation:fall 5s linear infinite}
- .caret {animation:blink 1s step-end infinite}
- .code {animation:code 5s steps(5,end) infinite}
-}
-@keyframes fall {from {transform:translateY(-45px);opacity:0} 20% {opacity:.3} to {transform:translateY(115px);opacity:0} }
-@keyframes blink {50% {opacity:0}}
-@keyframes code {0%,100% {opacity:.45} 50% {opacity:1}}
+text {{font-family:'Courier New',ui-monospace,monospace;font-size:13px;font-weight:700}}
+.strip {{transform:translateX(16px)}}
+@media (prefers-reduced-motion: no-preference) {{
+ .strip {{animation:scroll {seconds:.1f}s linear infinite}}
+}}
+@keyframes scroll {{from {{transform:translateX(0)}} to {{transform:translateX(-{x:.1f}px)}}}}
 </style>
-<rect width="240" height="190" rx="12" fill="#0D0D0F"/>
-''' + ''.join(rain) + '''
-<g shape-rendering="crispEdges">
-<path d="M44 42H196V48H202V122H38V48H44Z" fill="#9391FF"/>
-<path d="M47 50H193V114H47Z" fill="#242232"/>
-<path d="M54 57H186V107H54Z" fill="#0D0D0F"/>
-<path d="M38 122H202L222 159V165H18V159Z" fill="#484456"/>
-<path d="M38 126H202L218 156H22Z" fill="#292633"/>
-''' + keys + '''
-<path d="M97 155H145V158H97Z" fill="#B1AEFF"/>
-<path d="M18 159H222V165H18Z" fill="#9391FF"/>
-<rect x="181" y="118" width="4" height="2" fill="#C5BCFF"/>
+<defs>
+<clipPath id="inside"><rect x="1" y="1" width="{width - 2}" height="38" rx="7"/></clipPath>
+<linearGradient id="fade-left"><stop offset="0" stop-color="#17151F"/><stop offset="1" stop-color="#17151F" stop-opacity="0"/></linearGradient>
+<linearGradient id="fade-right"><stop offset="0" stop-color="#17151F" stop-opacity="0"/><stop offset="1" stop-color="#17151F"/></linearGradient>
+</defs>
+<rect x=".5" y=".5" width="{width - 1}" height="39" rx="8" fill="#17151F" stroke="#3B354E"/>
+<g clip-path="url(#inside)" shape-rendering="crispEdges">
+<g class="strip"><g>{strip}</g><g transform="translate({x:.1f} 0)">{strip}</g></g>
+<rect x="1" y="1" width="40" height="38" fill="url(#fade-left)"/>
+<rect x="{width - 41}" y="1" width="40" height="38" fill="url(#fade-right)"/>
 </g>
-<text x="61" y="72" font-size="9">melik@dev ~</text>
-<text x="61" y="87">&gt; build</text>
-<rect class="caret" x="109" y="79" width="5" height="9" fill="#9391FF"/>
-<g class="code" fill="#77748F"><rect x="61" y="95" width="43" height="2"/><rect x="110" y="95" width="21" height="2"/><rect x="136" y="95" width="31" height="2"/></g>
 </svg>
 '''
 
@@ -91,7 +95,7 @@ def badge(label, symbol, width):
 
 if __name__ == "__main__":
     assets = ROOT / "assets"
-    files = {"typing.svg": typing(), "computer.svg": computer(),
+    files = {"typing.svg": typing(), "ticker.svg": ticker(880), "ticker-mobile.svg": ticker(440),
              "website.svg": badge("Website", "&lt;/&gt;", 108),
              "linkedin.svg": badge("LinkedIn", "in", 109),
              "email.svg": badge("Email", "@", 92)}

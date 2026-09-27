@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="320" viewBox="0 0 640 320" role="img" aria-labelledby="title desc">
+<title id="title">On repeat</title>
+<desc id="desc">Top artists this week: none</desc>
+<style>
+.vinyl {transform-box:fill-box;transform-origin:center}
+@media (prefers-reduced-motion: no-preference) { .vinyl {animation:spin 4s linear infinite} }
+@keyframes spin {to {transform:rotate(360deg)}}
+</style>
+<rect width="640" height="320" rx="12" fill="#0D0D0F"/>
+<g font-family="Arial,Helvetica,sans-serif">
+<text x="28" y="46" fill="#EDEDEF" font-size="26" font-weight="700">On repeat</text>
+<text x="612" y="46" text-anchor="end" fill="#A1A1AA" font-size="16">last.fm/user/melik_cymz</text>
+<g class="vinyl"><circle cx="88" cy="140" r="44" fill="#17151F"/><circle cx="88" cy="140" r="36.08" fill="none" stroke="#2B2B35"/><circle cx="88" cy="140" r="29.040000000000003" fill="none" stroke="#2B2B35"/><circle cx="88" cy="140" r="22.0" fill="none" stroke="#2B2B35"/><path d="M88 96A44 44 0 0 1 132 140" fill="none" stroke="#3B354E" stroke-width="4"/><circle cx="88" cy="140" r="11.9" fill="#9391FF"/><circle cx="88" cy="140" r="3" fill="#0D0D0F"/></g>
+<text x="28" y="238" fill="#A1A1AA" font-size="17">Waiting for the</text><text x="28" y="262" fill="#A1A1AA" font-size="17">first Last.fm sync.</text><line x1="318" y1="72" x2="318" y2="288" stroke="#2B2B35"/><text x="344" y="92" fill="#A1A1AA" font-size="14">TOP ARTISTS · 7 DAYS</text>
+<text x="28" y="304" fill="#A1A1AA" font-size="14">First sync pending</text>
+</g>
+</svg>
