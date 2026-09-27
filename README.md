@@ -1,8 +1,10 @@
 <a href="https://www.melik.dev/"><picture><source media="(max-width: 600px)" srcset="assets/profile-hero-mobile.svg"><img src="assets/profile-hero.svg" width="100%" alt="Melik Ahmet Caymazoğlu — Full-stack · Blockchain · Vision & inference"></picture></a>
 
+<img src="assets/typing.svg" width="560" alt="Full-stack developer · Blockchain developer · Computer vision builder">
+
 I build apps, smart contracts and things that see. Usually moving between TypeScript, Solidity and Python — with some C, C++ and Java along the way.
 
-[Website](https://www.melik.dev/) · [LinkedIn](https://www.linkedin.com/in/melik-ahmet-caymazo%C4%9Flu-42a136254/) · [Say hello](mailto:melikcaymaz@gmail.com)
+<a href="https://www.melik.dev/"><img src="assets/website.svg" width="108" height="32" alt="Website"></a> <a href="https://www.linkedin.com/in/melik-ahmet-caymazo%C4%9Flu-42a136254/"><img src="assets/linkedin.svg" width="109" height="32" alt="LinkedIn"></a> <a href="mailto:melikcaymaz@gmail.com"><img src="assets/email.svg" width="92" height="32" alt="Email"></a>
 
 ## My toolbox
 
@@ -26,7 +28,7 @@ I build apps, smart contracts and things that see. Usually moving between TypeSc
 
 ## In the code
 
-<img src="assets/languages.svg" width="480" alt="Language distribution by code bytes across my public, non-fork repositories. Updated daily.">
+<img src="assets/languages.svg" width="480" alt="Language distribution by code bytes across my public, non-fork repositories. Updated daily."> <img src="assets/computer.svg" width="180" alt="A little purple pixel computer, always building">
 
 <sub>Personal public repos only. Forks, this profile, markup, stylesheets and build/document formats are excluded. Team projects and private work aren't represented. Code volume, not proficiency.</sub>
 

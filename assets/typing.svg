@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="64" viewBox="0 0 560 64" role="img" aria-labelledby="title">
+<title id="title">Full-stack developer · Blockchain developer · Computer vision builder</title>
+<style>
+text { font-family: 'Courier New',monospace; font-size: 25px; fill: #9391FF; }
+.extra { display:none; }
+.cursor { opacity:0; }
+@media (prefers-reduced-motion: no-preference) {
+ .extra { display:inline; }
+ .reveal { animation: type 15s steps(var(--chars),end) infinite both; animation-delay:var(--delay); }
+ .cursor { opacity:1; animation: follow 15s steps(var(--chars),end) infinite both; animation-delay:var(--delay); }
+ .blink { animation: blink 1s step-end infinite; }
+}
+@keyframes type { 0%,2% {width:0} 17%,26% {width:var(--width)} 32%,100% {width:0} }
+@keyframes follow { 0% {transform:translateX(0);opacity:0} 2% {transform:translateX(0);opacity:1} 17%,26% {transform:translateX(var(--width));opacity:1} 32% {transform:translateX(0);opacity:1} 33%,100% {transform:translateX(0);opacity:0} }
+@keyframes blink { 50% {opacity:0} }
+</style>
+<text x="4" y="42" aria-hidden="true">&gt;</text>
+<g class="first" style="--width:300px;--chars:20;--delay:0s">
+<defs><clipPath id="role0"><rect class="reveal" x="32" y="12" width="300" height="40"/></clipPath></defs>
+<text x="32" y="42" textLength="300" lengthAdjust="spacingAndGlyphs" clip-path="url(#role0)">Full-stack developer</text>
+<g class="cursor"><rect class="blink" x="34" y="21" width="2" height="26" fill="#9391FF"/></g>
+</g>
+<g class="extra" style="--width:300px;--chars:20;--delay:5s">
+<defs><clipPath id="role1"><rect class="reveal" x="32" y="12" width="300" height="40"/></clipPath></defs>
+<text x="32" y="42" textLength="300" lengthAdjust="spacingAndGlyphs" clip-path="url(#role1)">Blockchain developer</text>
+<g class="cursor"><rect class="blink" x="34" y="21" width="2" height="26" fill="#9391FF"/></g>
+</g>
+<g class="extra" style="--width:345px;--chars:23;--delay:10s">
+<defs><clipPath id="role2"><rect class="reveal" x="32" y="12" width="345" height="40"/></clipPath></defs>
+<text x="32" y="42" textLength="345" lengthAdjust="spacingAndGlyphs" clip-path="url(#role2)">Computer vision builder</text>
+<g class="cursor"><rect class="blink" x="34" y="21" width="2" height="26" fill="#9391FF"/></g>
+</g></svg>
