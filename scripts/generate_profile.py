@@ -9,7 +9,7 @@ from math import cos, sin, pi
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-BG, INK, MUTED, ACCENT = "#0D0D0F", "#EDEDEF", "#A1A1AA", "#9391FF"
+BG, INK, MUTED, ACCENT = "#111113", "#EDEEF0", "#B0B4BA", "#9EB1FF"
 
 
 def contours(cx, cy, scale):
@@ -26,7 +26,7 @@ def contours(cx, cy, scale):
         accent = ring % 5 == 1
         paths.append(f'<path class="{"contour" if accent else "terrain"}" '
                      f'd="M {" L ".join(points)} Z" fill="none" '
-                     f'stroke="{ACCENT if accent else "#63636F"}" '
+                     f'stroke="{ACCENT if accent else "#43484E"}" '
                      f'stroke-opacity="{.36 if accent else .19}" stroke-width="1"/>')
     return "\n".join(paths)
 
@@ -56,7 +56,7 @@ def banner(mobile=False):
                 '<tspan x="36" dy="32">Vision &amp; inference</tspan>') if mobile else 'Full-stack · Blockchain · Vision &amp; inference'
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-labelledby="title desc">
 <title id="title">Melik Ahmet Caymazoğlu</title>
-<desc id="desc">Full-stack, blockchain, vision and inference. Purple topographic contours surround an ASCII M monogram.</desc>
+<desc id="desc">Full-stack, blockchain, vision and inference. Blue topographic contours surround an ASCII M monogram.</desc>
 <defs>
   <linearGradient id="shade"><stop offset="0" stop-color="{BG}"/><stop offset=".62" stop-color="{BG}" stop-opacity=".93"/><stop offset="1" stop-color="{BG}" stop-opacity="0"/></linearGradient>
 </defs>
@@ -81,7 +81,7 @@ def banner(mobile=False):
   <tspan x="{name_x}">Melik Ahmet</tspan><tspan x="{name_x}" dy="{70 if mobile else 87}">Caymazoğlu</tspan>
 </text>
 <text x="{name_x}" y="{239 if mobile else 341}" fill="{MUTED}" font-size="{25 if mobile else 25}">{subtitle}</text>
-<line x1="{name_x}" y1="{528 if mobile else 408}" x2="{w - name_x}" y2="{528 if mobile else 408}" stroke="#2B2B35"/>
+<line x1="{name_x}" y1="{528 if mobile else 408}" x2="{w - name_x}" y2="{528 if mobile else 408}" stroke="#363A3F"/>
 <text x="{name_x}" y="{553 if mobile else 436}" fill="{MUTED}" font-size="{17 if mobile else 16}">Gebze, Türkiye</text>
 <text x="{w - name_x}" y="{553 if mobile else 436}" text-anchor="end" fill="{ACCENT}" font-size="{17 if mobile else 16}">melik.dev</text>
 </svg>

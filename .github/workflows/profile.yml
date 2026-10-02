@@ -55,8 +55,8 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/snake-dark.svg?palette=github-dark&color_snake=#9391FF&color_dots=#161B22,#2E2A48,#4B4786,#7370D0,#B1AEFF
-            dist/snake-light.svg?palette=github-light&color_snake=#6F6CF0&color_dots=#EBEDF0,#DCDAFF,#B1AEFF,#8C89F5,#6F6CF0
+            dist/snake-dark.svg?palette=github-dark&color_snake=#9EB1FF&color_dots=#161B22,#182449,#294484,#3E63DD,#B6C8EC
+            dist/snake-light.svg?palette=github-light&color_snake=#3E63DD&color_dots=#EBEDF0,#DCE5FA,#B6C8EC,#7095E5,#3E63DD
       # Snake frames change daily; keeping them on a history-less branch keeps main small.
       - uses: crazy-max/ghaction-github-pages@v4
         with:

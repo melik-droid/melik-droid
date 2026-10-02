@@ -14,7 +14,7 @@ from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parent.parent
 USER = "melik-droid"
-COLORS = ["#9391FF", "#B1AEFF", "#7088CF", "#6CA5B8", "#9DBAA5", "#B2A0C4", "#777780"]
+COLORS = ["#9EB1FF", "#B6C8EC", "#7292BC", "#6F9FAF", "#9DBAA5", "#A5ADB8", "#7E8792"]
 # Keep the card focused on programming, not stylesheets, documents or build files.
 EXCLUDED = {"Makefile", "CMake", "Dockerfile", "HTML", "CSS", "SCSS", "Sass", "Less",
             "TeX", "Markdown", "MDX", "JSON", "YAML", "XML"}
@@ -68,10 +68,10 @@ def render(totals, count, date):
     out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="480" height="{height}" viewBox="0 0 480 {height}" role="img" aria-labelledby="title desc">',
            '<title id="title">Languages across my public repos</title>',
            '<desc id="desc">Code bytes reported by GitHub. Excludes forks, private repositories and the profile repository. Not a proficiency score.</desc>',
-           f'<rect width="480" height="{height}" rx="12" fill="#0D0D0F"/>',
+           f'<rect width="480" height="{height}" rx="12" fill="#111113"/>',
            '<g font-family="Arial,Helvetica,sans-serif">',
-           '<text x="24" y="38" fill="#EDEDEF" font-size="22" font-weight="700">Languages in my repos</text>',
-           f'<text x="24" y="63" fill="#A1A1AA" font-size="14">{count} public source repos · code bytes</text>']
+           '<text x="24" y="38" fill="#EDEEF0" font-size="22" font-weight="700">Languages in my repos</text>',
+           f'<text x="24" y="63" fill="#B0B4BA" font-size="14">{count} public source repos · code bytes</text>']
     x = 24.0
     for index, (name, size) in enumerate(items):
         color = COLORS[index]
@@ -82,11 +82,11 @@ def render(totals, count, date):
         percent = size / total * 100
         label = f"{percent:.1f}%" if percent >= .1 else "&lt;0.1%"
         out.extend([f'<circle cx="30" cy="{y - 6}" r="5" fill="{color}"/>',
-                    f'<text x="46" y="{y}" fill="#EDEDEF" font-size="19">{escape(name)}</text>',
-                    f'<text x="456" y="{y}" text-anchor="end" fill="#A1A1AA" font-size="19">{label}</text>'])
+                    f'<text x="46" y="{y}" fill="#EDEEF0" font-size="19">{escape(name)}</text>',
+                    f'<text x="456" y="{y}" text-anchor="end" fill="#B0B4BA" font-size="19">{label}</text>'])
     if not items:
-        out.append('<text x="24" y="130" fill="#A1A1AA" font-size="18">No language data available yet.</text>')
-    out.append(f'<text x="24" y="{height - 21}" fill="#A1A1AA" font-size="13">Updated {escape(date)} · refreshed daily</text></g></svg>\n')
+        out.append('<text x="24" y="130" fill="#B0B4BA" font-size="18">No language data available yet.</text>')
+    out.append(f'<text x="24" y="{height - 21}" fill="#B0B4BA" font-size="13">Updated {escape(date)} · refreshed daily</text></g></svg>\n')
     return "\n".join(out)
 
 

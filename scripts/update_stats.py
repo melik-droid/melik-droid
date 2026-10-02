@@ -13,7 +13,7 @@ from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parent.parent
 USER = "melik-droid"
-ACCENT, INK, MUTED, FAINT = "#9391FF", "#EDEDEF", "#A1A1AA", "#2B2B35"
+ACCENT, INK, MUTED, FAINT = "#9EB1FF", "#EDEEF0", "#B0B4BA", "#363A3F"
 
 QUERY = """query($login: String!, $cursor: String) {
   user(login: $login) {
@@ -117,7 +117,7 @@ def render(stats, updated):
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="480" height="428" viewBox="0 0 480 428" role="img" aria-labelledby="title desc">
 <title id="title">GitHub activity</title>
 <desc id="desc">{escape(summary)}</desc>
-<rect width="480" height="428" rx="12" fill="#0D0D0F"/>
+<rect width="480" height="428" rx="12" fill="#111113"/>
 <g font-family="Arial,Helvetica,sans-serif">
 <text x="24" y="38" fill="{INK}" font-size="22" font-weight="700">GitHub activity</text>
 <text x="24" y="63" fill="{MUTED}" font-size="14">last 12 months · contributions per week</text>

@@ -51,13 +51,13 @@ KEYWORDS = {"contract", "mapping", "function", "external", "require", "emit", "c
 
 
 def terminal_lines():
-    prompt = (f'<tspan fill="{ACCENT}">melik@dev</tspan><tspan fill="#77748F">:~$ </tspan>', 13)
+    prompt = (f'<tspan fill="{ACCENT}">melik@dev</tspan><tspan fill="#89939F">:~$ </tspan>', 13)
     lines = [(prompt[0] + f'<tspan fill="{INK}">now</tspan>', 16)]
     for label, value in NOW:
         if len(value) > 21:
             raise ValueError(f"'{value}' is too long for the terminal (21 characters max)")
-        colour = "#B1AEFF" if label == "status" else INK
-        lines.append((f'<tspan fill="#77748F">{label:<10}</tspan><tspan fill="{colour}">{escape(value)}</tspan>',
+        colour = "#B6C8EC" if label == "status" else INK
+        lines.append((f'<tspan fill="#89939F">{label:<10}</tspan><tspan fill="{colour}">{escape(value)}</tspan>',
                       10 + len(value)))
     lines.append(prompt)
     return lines
@@ -65,7 +65,7 @@ def terminal_lines():
 
 def highlight(line):
     if line.startswith("$ "):
-        return f'<tspan fill="#77748F">$ </tspan><tspan fill="{INK}">{escape(line[2:])}</tspan>'
+        return f'<tspan fill="#89939F">$ </tspan><tspan fill="{INK}">{escape(line[2:])}</tspan>'
     out = []
     tokens = re.findall(r'"[^"]*"|\w+|\s+|[^\w\s"]+', line)
     for index, token in enumerate(tokens):
@@ -75,13 +75,13 @@ def highlight(line):
         elif token in KEYWORDS:
             colour = ACCENT
         elif token.isdigit():
-            colour = "#C5BCFF"
+            colour = "#D0DDF2"
         elif re.fullmatch(r"\w+", token) and following.startswith("("):
-            colour = "#B1AEFF"
+            colour = "#B6C8EC"
         elif re.fullmatch(r"\w+", token):
-            colour = "#D4D3DE"
+            colour = "#D5DAE0"
         else:
-            colour = "#77748F"
+            colour = "#89939F"
         out.append(f'<tspan fill="{colour}">{escape(token)}</tspan>')
     return "".join(out)
 
@@ -140,11 +140,11 @@ def desk():
     loop, stream = code_stream(sx, sy, sw, sh)
 
     kb = frame_bottom + 12  # keyboard top
-    keys = "".join(f'<rect x="{100 + col * 13}" y="{kb + 3 + row * 4}" width="10" height="2" fill="#77748F"/>'
+    keys = "".join(f'<rect x="{100 + col * 13}" y="{kb + 3 + row * 4}" width="10" height="2" fill="#89939F"/>'
                    for row in range(2) for col in range(20))
 
     steam = "".join(
-        f'<g class="steam" style="animation-delay:-{i}s" fill="#77748F">'
+        f'<g class="steam" style="animation-delay:-{i}s" fill="#89939F">'
         f'<rect x="{430 + i * 7}" y="{desk_top - 48}" width="4" height="4"/>'
         f'<rect x="{434 + i * 7}" y="{desk_top - 56}" width="4" height="4"/></g>'
         for i in range(3))
@@ -152,7 +152,7 @@ def desk():
     status = ", ".join(f"{label}: {value}" for label, value in NOW)
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-labelledby="title desc">
 <title id="title">Now — {escape(status)}</title>
-<desc id="desc">A purple pixel desk. The monitor types out what I am building and learning while code scrolls past beside it.</desc>
+<desc id="desc">A blue pixel desk. The monitor types out what I am building and learning while code scrolls past beside it.</desc>
 <style>
 text {{font-family:'Courier New',ui-monospace,monospace;font-size:17px}}
 .code {{font-size:13px}}
@@ -181,21 +181,21 @@ text {{font-family:'Courier New',ui-monospace,monospace;font-size:17px}}
 <g clip-path="url(#card)" shape-rendering="crispEdges">
 <rect width="{w}" height="{h}" fill="{BG}"/>
 {stream}
-<rect x="0" y="{desk_top}" width="{w}" height="8" fill="#484456"/>
-<rect x="0" y="{desk_top + 8}" width="{w}" height="50" fill="#292633"/>
-<rect x="0" y="{desk_top + 8}" width="{w}" height="2" fill="#1C1A24"/>
-<rect x="200" y="{frame_bottom}" width="32" height="14" fill="#484456"/>
+<rect x="0" y="{desk_top}" width="{w}" height="8" fill="#43484E"/>
+<rect x="0" y="{desk_top + 8}" width="{w}" height="50" fill="#272A2E"/>
+<rect x="0" y="{desk_top + 8}" width="{w}" height="2" fill="#1B1E22"/>
+<rect x="200" y="{frame_bottom}" width="32" height="14" fill="#43484E"/>
 <path d="M40 36H392V40H396V{frame_bottom}H36V40H40Z" fill="{ACCENT}"/>
-<rect x="40" y="40" width="352" height="{frame_bottom - 44}" fill="#242232"/>
+<rect x="40" y="40" width="352" height="{frame_bottom - 44}" fill="#22262B"/>
 <rect x="48" y="48" width="336" height="{screen_bottom - 48}" fill="{BG}"/>
-<rect class="led" x="376" y="{screen_bottom + 3}" width="8" height="3" fill="#C5BCFF"/>
+<rect class="led" x="376" y="{screen_bottom + 3}" width="8" height="3" fill="#D0DDF2"/>
 <g clip-path="url(#screen)">
 {chr(10).join(text)}
 {chr(10).join(covers)}
 <g class="caret-group">{prompt}<rect class="caret" x="{caret_x:.1f}" y="{caret_y}" width="9" height="18" fill="{ACCENT}"/></g>
 </g>
-<rect x="92" y="{kb}" width="268" height="12" fill="#484456"/>
-<rect x="92" y="{kb}" width="268" height="2" fill="#5A566A"/>
+<rect x="92" y="{kb}" width="268" height="12" fill="#43484E"/>
+<rect x="92" y="{kb}" width="268" height="2" fill="#59616B"/>
 {keys}
 {sprite(MUG, 420, desk_top - 32, 4)}
 {steam}

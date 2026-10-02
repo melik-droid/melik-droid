@@ -5,16 +5,16 @@ character is a key into a palette. Runs of the same colour on a row are merged
 into one rect so the SVGs stay small.
 """
 
-BG, INK, MUTED, ACCENT = "#0D0D0F", "#EDEDEF", "#A1A1AA", "#9391FF"
+BG, INK, MUTED, ACCENT = "#111113", "#EDEEF0", "#B0B4BA", "#9EB1FF"
 
 PALETTE = {
-    "P": ACCENT,     # purple
-    "L": "#B1AEFF",  # lavender
-    "W": "#C5BCFF",  # highlight
-    "D": "#484456",  # desk / metal
-    "K": "#292633",  # shadow
-    "G": "#77748F",  # muted grey
-    "S": "#242232",  # bezel
+    "P": ACCENT,     # blue
+    "L": "#B6C8EC",  # pale blue
+    "W": "#D0DDF2",  # highlight
+    "D": "#43484E",  # desk / metal
+    "K": "#272A2E",  # shadow
+    "G": "#89939F",  # muted grey
+    "S": "#22262B",  # bezel
     "B": BG,         # screen black
     "I": INK,        # white-ish
     "V": "#9DBAA5",  # sage leaves
