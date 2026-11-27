@@ -4,33 +4,33 @@
 <rect width="480" height="428" rx="12" fill="#111113"/>
 <g font-family="Arial,Helvetica,sans-serif">
 <text x="24" y="38" fill="#EDEEF0" font-size="22" font-weight="700">Languages in my repos</text>
-<text x="24" y="63" fill="#B0B4BA" font-size="14">19 public source repos · code bytes</text>
-<rect x="24.000" y="84" width="75.212" height="12" fill="#9EB1FF"/>
+<text x="24" y="63" fill="#B0B4BA" font-size="14">18 public source repos · code bytes</text>
+<rect x="24.000" y="84" width="78.479" height="12" fill="#9EB1FF"/>
 <circle cx="30" cy="124" r="5" fill="#9EB1FF"/>
 <text x="46" y="130" fill="#EDEEF0" font-size="19">PHP</text>
-<text x="456" y="130" text-anchor="end" fill="#B0B4BA" font-size="19">17.4%</text>
-<rect x="99.212" y="84" width="73.198" height="12" fill="#B6C8EC"/>
+<text x="456" y="130" text-anchor="end" fill="#B0B4BA" font-size="19">18.2%</text>
+<rect x="102.479" y="84" width="76.378" height="12" fill="#B6C8EC"/>
 <circle cx="30" cy="162" r="5" fill="#B6C8EC"/>
 <text x="46" y="168" fill="#EDEEF0" font-size="19">TypeScript</text>
-<text x="456" y="168" text-anchor="end" fill="#B0B4BA" font-size="19">16.9%</text>
-<rect x="172.411" y="84" width="70.762" height="12" fill="#7292BC"/>
+<text x="456" y="168" text-anchor="end" fill="#B0B4BA" font-size="19">17.7%</text>
+<rect x="178.857" y="84" width="73.836" height="12" fill="#7292BC"/>
 <circle cx="30" cy="200" r="5" fill="#7292BC"/>
 <text x="46" y="206" fill="#EDEEF0" font-size="19">C</text>
-<text x="456" y="206" text-anchor="end" fill="#B0B4BA" font-size="19">16.4%</text>
-<rect x="243.173" y="84" width="69.130" height="12" fill="#6F9FAF"/>
+<text x="456" y="206" text-anchor="end" fill="#B0B4BA" font-size="19">17.1%</text>
+<rect x="252.693" y="84" width="72.133" height="12" fill="#6F9FAF"/>
 <circle cx="30" cy="238" r="5" fill="#6F9FAF"/>
 <text x="46" y="244" fill="#EDEEF0" font-size="19">Python</text>
-<text x="456" y="244" text-anchor="end" fill="#B0B4BA" font-size="19">16.0%</text>
-<rect x="312.303" y="84" width="63.002" height="12" fill="#9DBAA5"/>
+<text x="456" y="244" text-anchor="end" fill="#B0B4BA" font-size="19">16.7%</text>
+<rect x="324.826" y="84" width="48.287" height="12" fill="#9DBAA5"/>
 <circle cx="30" cy="276" r="5" fill="#9DBAA5"/>
 <text x="46" y="282" fill="#EDEEF0" font-size="19">JavaScript</text>
-<text x="456" y="282" text-anchor="end" fill="#B0B4BA" font-size="19">14.6%</text>
-<rect x="375.305" y="84" width="34.744" height="12" fill="#A5ADB8"/>
+<text x="456" y="282" text-anchor="end" fill="#B0B4BA" font-size="19">11.2%</text>
+<rect x="373.113" y="84" width="34.940" height="12" fill="#A5ADB8"/>
 <circle cx="30" cy="314" r="5" fill="#A5ADB8"/>
 <text x="46" y="320" fill="#EDEEF0" font-size="19">Shell</text>
-<text x="456" y="320" text-anchor="end" fill="#B0B4BA" font-size="19">8.0%</text>
-<rect x="410.049" y="84" width="45.951" height="12" fill="#7E8792"/>
+<text x="456" y="320" text-anchor="end" fill="#B0B4BA" font-size="19">8.1%</text>
+<rect x="408.054" y="84" width="47.946" height="12" fill="#7E8792"/>
 <circle cx="30" cy="352" r="5" fill="#7E8792"/>
 <text x="46" y="358" fill="#EDEEF0" font-size="19">Other</text>
-<text x="456" y="358" text-anchor="end" fill="#B0B4BA" font-size="19">10.6%</text>
-<text x="24" y="407" fill="#B0B4BA" font-size="13">Updated 2026-11-26 · refreshed daily</text></g></svg>
+<text x="456" y="358" text-anchor="end" fill="#B0B4BA" font-size="19">11.1%</text>
+<text x="24" y="407" fill="#B0B4BA" font-size="13">Updated 2026-11-27 · refreshed daily</text></g></svg>
